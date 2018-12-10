@@ -4,7 +4,6 @@ Many API requests (webhooks, etc.) are signed with an encoded HMAC header genera
 
 ### Config / Example use
 
-`header`: the header key that contains the signature.  
 `algorithm`: the HMAC algorithm (anything supported by `crypto.createHmac()`). Defaults to `sha256`.  
 `secret`: the shared secret that the signature is signed with.  
 `getDigest`: function that receives the request object and returns the signature.  
