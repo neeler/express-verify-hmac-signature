@@ -1,6 +1,10 @@
 # Verify HMAC Signature - Express Middleware
 
-Many API requests (webhooks, etc.) are signed with an encoded HMAC header generated using the request body and a secret. This is a simple Express middleware for verifying these types of signatures. 
+Many API requests (webhooks, etc.) are signed with an encoded HMAC header generated using the request body and a secret. This is a simple Express middleware for verifying these types of signatures.
+
+### Installation
+
+`npm install --save express-verify-hmac-signature` 
 
 ### Config / Example use
 
