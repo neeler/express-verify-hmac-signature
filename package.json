@@ -1,6 +1,6 @@
 {
   "name": "express-verify-hmac-signature",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Express middleware for verifying HMAC-signed request body",
   "main": "index.js",
   "repository": {
@@ -20,9 +20,7 @@
     "url": "https://github.com/neeler/express-verify-hmac-signature/issues"
   },
   "homepage": "https://github.com/neeler/express-verify-hmac-signature#readme",
-  "dependencies": {
-    "buffer-equal-constant-time": "^1.0.1"
-  },
+  "dependencies": {},
   "prettier": {
     "singleQuote": true,
     "tabWidth": 4

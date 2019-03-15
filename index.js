@@ -1,5 +1,4 @@
 const crypto = require('crypto');
-const bufferEqual = require('buffer-equal-constant-time');
 
 function verifyHmacSignature({
     algorithm = 'sha256',
@@ -20,7 +19,7 @@ function verifyHmacSignature({
         }
 
         if (
-            !bufferEqual(
+            !crypto.timingSafeEqual(
                 Buffer.from(receivedDigest),
                 Buffer.from(computedHmac.digest(encoding))
             )
