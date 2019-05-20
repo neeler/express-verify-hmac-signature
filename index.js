@@ -18,16 +18,20 @@ function verifyHmacSignature({
             computedHmac.update(body);
         }
 
-        if (
-            !crypto.timingSafeEqual(
-                Buffer.from(receivedDigest),
-                Buffer.from(computedHmac.digest(encoding))
-            )
-        ) {
+        try {
+            if (
+                !crypto.timingSafeEqual(
+                    Buffer.from(receivedDigest),
+                    Buffer.from(computedHmac.digest(encoding))
+                )
+            ) {
+                return onFailure(req, res, next);
+            }
+
+            next();
+        } catch (err) {
             return onFailure(req, res, next);
         }
-
-        next();
     };
 }
 
