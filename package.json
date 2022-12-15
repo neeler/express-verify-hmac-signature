@@ -1,6 +1,6 @@
 {
   "name": "express-verify-hmac-signature",
-  "version": "1.1.3",
+  "version": "2.0.0",
   "description": "Express middleware for verifying HMAC-signed request body",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
